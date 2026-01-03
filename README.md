@@ -342,11 +342,10 @@ parameters {
 
 ## 👤 Author
 
-**Inesh Tickoo**
+**Inesh Reddy**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://linkedin.com/in/ineshtickoo)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github)](https://github.com/ineshtickoo)
-
+https://www.linkedin.com/in/inesh-reddy
+https://github.com/IneshReddy249
 ---
 
 **⭐ Star this repo if it helped you!**
