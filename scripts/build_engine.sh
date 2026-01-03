@@ -1,14 +1,18 @@
 #!/bin/bash
-set -e
-export PATH=$PATH:~/.local/bin
+CHECKPOINT_DIR="/workspace/models/llama-3.1-8b-fp8"
+OUTPUT_DIR="/workspace/engines/llama-8b-fp8"
+
+mkdir -p $OUTPUT_DIR
 
 trtllm-build \
-    --checkpoint_dir /home/shadeform/llama-trt-optimization/engines/optimized/checkpoint \
-    --output_dir /home/shadeform/llama-trt-optimization/engines/optimized/engine \
-    --gemm_plugin auto \
-    --gpt_attention_plugin auto \
-    --use_paged_context_fmha enable \
-    --use_fused_mlp enable \
+    --checkpoint_dir $CHECKPOINT_DIR \
+    --output_dir $OUTPUT_DIR \
+    --gemm_plugin float16 \
+    --gpt_attention_plugin float16 \
+    --max_batch_size 16 \
     --max_input_len 2048 \
     --max_seq_len 4096 \
-    --max_batch_size 16
+    --paged_kv_cache enable \
+    --use_paged_context_fmha enable \
+    --multiple_profiles enable \
+    --use_fp8_context_fmha enable
