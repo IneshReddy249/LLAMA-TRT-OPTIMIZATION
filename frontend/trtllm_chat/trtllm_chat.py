@@ -269,33 +269,3 @@ parameters {
   key: "enable_chunked_context"
   value: { string_value: "true" }
 }
-```
-
----
-
-### File 9: `README.md`
-
-**Path:** `README.md`
-
-Copy the README I gave you earlier (the one titled "README_H100_FP8.md")
-
----
-
-## Final Structure After All Changes:
-```
-your-repo/
-├── .gitignore
-├── README.md
-├── docker-compose.yaml
-├── start_all.sh
-├── requirements.txt
-├── backend/
-│   └── src/
-│       └── server.py
-├── frontend/
-│   ├── rxconfig.py
-│   └── trtllm_chat/
-│       └── trtllm_chat.py
-└── triton_model_repo/
-    └── tensorrt_llm/
-        └── config.pbtxt
